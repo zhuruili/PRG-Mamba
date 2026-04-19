@@ -1,6 +1,6 @@
 # R2GenGraduation
 
-This repository contains the source code for my graduation project. I improved the R2Gen-Mamba model and applied it to road damage datasets for automatic report generation.
+This repository contains the source code for my graduation project. I tried to modify the "R2Gen-Mamba" model and applied it to road damage datasets for automatic report generation.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ This repository contains the source code for my graduation project. I improved t
 
 The pre-trained R2GenGraduation models on different datasets. You can download the models and run them on the corresponding datasets to replicate my results.
 
-到时候在release里面
+到时候放在release里面
 
 ## Datasets
 

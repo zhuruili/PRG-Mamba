@@ -1,12 +1,13 @@
 python main_train.py \
---image_dir /media/sun/DATA/data_2T/physionet.org/files/mimic-cxr-jpg/2.1.0/ \
---ann_path /media/sun/DATA/data_2T/physionet.org/files/mimic-cxr-jpg/2.1.0/updated_mimic_annotation.json \
---dataset_name mimic_cxr \
+--image_dir /data/serverC/Projects/R2Gen-Mamba/datasets/UAPD/JPEGImages \
+--ann_path /data/serverC/Projects/R2Gen-Mamba/datasets/UAPD/annotations-split.json \
+--dataset_name UAPD \
 --max_seq_length 100 \
---threshold 10 \
+--threshold 3 \
 --batch_size 16 \
---epochs 30 \
---save_dir results/mimic_cxr_0912 \
+--epochs 100 \
+--save_dir results/UAPD \
 --step_size 1 \
 --gamma 0.8 \
---seed 456789
+--d_vf 2048 \
+--seed 9223

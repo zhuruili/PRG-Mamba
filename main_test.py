@@ -26,11 +26,17 @@ def parse_agrs():
     # Model settings (for visual extractor)
     parser.add_argument('--visual_extractor', type=str, default='resnet101', help='the visual extractor to be used.')
     parser.add_argument('--visual_extractor_pretrained', type=bool, default=True, help='whether to load the pretrained visual extractor')
+    parser.add_argument('--visual_mode', type=str, default='vmamba_swin', choices=['resnet', 'vmamba_swin'],
+                    help='visual frontend type.')
+    parser.add_argument('--vis_patch_size', type=int, default=4, help='patch size for patch embedding.')
+    parser.add_argument('--vis_embed_dim', type=int, default=128, help='embedding dim before hierarchical merging.')
+    parser.add_argument('--cross_scan_fuse', type=str, default='concat', choices=['concat', 'weighted'],
+                        help='cross-scan fusion strategy.')
 
     # Model settings (for Transformer)
     parser.add_argument('--d_model', type=int, default=512, help='the dimension of Transformer.')
     parser.add_argument('--d_ff', type=int, default=512, help='the dimension of FFN.')
-    parser.add_argument('--d_vf', type=int, default=2048, help='the dimension of the patch features.')
+    parser.add_argument('--d_vf', type=int, default=512, help='the dimension of the patch features.')
     parser.add_argument('--num_heads', type=int, default=8, help='the number of heads in Transformer.')
     parser.add_argument('--num_layers', type=int, default=3, help='the number of layers of Transformer.')
     parser.add_argument('--dropout', type=float, default=0.1, help='the dropout rate of Transformer.')

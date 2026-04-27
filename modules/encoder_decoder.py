@@ -314,7 +314,8 @@ class EncoderDecoder(AttModel):
             # Encoder(EncoderLayer(self.d_model, c(attn), c(ff), self.dropout), self.num_layers),
             Encoder(
                 # This module uses roughly 3 * expand * d_model^2 parameters
-                d_model=512,  # Model dimension d_model
+                # d_model=512,  # Model dimension d_model
+                d_model=self.d_model,
                 d_state=16,  # SSM state expansion factor
                 d_conv=4,  # Local convolution width
                 expand=2,  # Block expansion factor

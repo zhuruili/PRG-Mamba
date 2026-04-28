@@ -3,11 +3,16 @@ python main_train.py \
 --ann_path /data/serverC/Projects/R2Gen-Mamba/datasets/UAPD/annotations-split.json \
 --dataset_name UAPD \
 --max_seq_length 100 \
---threshold 3 \
---batch_size 16 \
+--threshold 10 \
+--batch_size 64 \
 --epochs 100 \
 --save_dir results/UAPD \
 --step_size 1 \
 --gamma 0.8 \
---d_vf 2048 \
---seed 9223
+--d_vf 512 \
+--visual_mode vmamba_swin \
+--vis_patch_size 4 \
+--vis_embed_dim 128 \
+--cross_scan_fuse concat \
+--seed 9223 \
+
